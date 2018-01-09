@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vegasbrianc/prometheus.svg?branch=version-2)](https://travis-ci.org/vegasbrianc/prometheus)
+[![Build Status](https://travis-ci.org/Jazun317/prometheus.svg?branch=version-2)](https://travis-ci.org/vegasbrianc/prometheus)
 
 # Contents
 
@@ -20,7 +20,7 @@
 
 Here's a quick start using Play-With-Docker (PWD) to start-up a [Prometheus](http://prometheus.io/) stack containing Prometheus, Grafana and Node scraper to monitor your Docker infrastructure. The Try in PWD below allows you to quickly deploy the entire Prometheus stack with a click of the button. This will allow you to quickly test the stack to see if it meets your needs.
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/vegasbrianc/prometheus/version-2/pwd-stack.yml) 
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/Jazun317/prometheus/version-2/pwd-stack.yml) 
 
 # Pre-requisites
 Before we get started installing the Prometheus stack. Ensure you install the latest version of docker and [docker swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/) on your Docker host machine. Docker Swarm is installed automatically when using Docker for Mac or Docker for Windows.
@@ -28,7 +28,7 @@ Before we get started installing the Prometheus stack. Ensure you install the la
 # Installation & Configuration
 Clone the project locally to your Docker host. 
 
-If you would like to change which targets should be monitored or make configuration changes edit the [/prometheus/prometheus.yml](https://github.com/vegasbrianc/prometheus/blob/version-2/prometheus/prometheus.yml) file. The targets section is where you define what should be monitored by Prometheus. The names defined in this file are actually sourced from the service name in the docker-compose file. If you wish to change names of the services you can add the "container_name" parameter in the `docker-compose.yml` file.
+If you would like to change which targets should be monitored or make configuration changes edit the [/prometheus/prometheus.yml](https://github.com/Jazun317/prometheus/blob/version-2/prometheus/prometheus.yml) file. The targets section is where you define what should be monitored by Prometheus. The names defined in this file are actually sourced from the service name in the docker-compose file. If you wish to change names of the services you can add the "container_name" parameter in the `docker-compose.yml` file.
 
 Once configurations are done let's start it up. From the /prometheus project directory run the following command:
 
@@ -60,7 +60,7 @@ Now we need to create the Prometheus Datasource in order to connect Grafana to P
 * Click `Data Sources`
 * Click the green button `Add Data Source`.
 
-<img src="https://github.com/vegasbrianc/prometheus/raw/version-2/images/Add_Data_Source.png" width="400" heighth="400">
+<img src="https://github.com/Jazun317/prometheus/raw/version-2/images/Add_Data_Source.png" width="400" heighth="400">
 
 ## Alerting
 Alerting has been added to the stack with Slack integration. 2 Alerts have been added and are managed 
@@ -95,7 +95,7 @@ This dashboard is intended to help you get started with monitoring. If you have 
 
 Here's the Dashboard Template
 
-![Grafana Dashboard](https://github.com/vegasbrianc/prometheus/raw/version-2/images/Dashboard.png)
+![Grafana Dashboard](https://github.com/Jazun317/prometheus/raw/version-2/images/Dashboard.png)
 
 Grafana Dashboard - `dashboards/Grana_Dashboad.json`
 Alerting Dashboard - `dashboards/System_Monitoring.json`
@@ -121,9 +121,9 @@ The node-exporter does not run the same as Mac and Linux. Node-Exporter is not d
 # Interesting Projects that use this Repo
 Several projects utilize this Prometheus stack. Here's the list of projects:
 
-* [Docker Pulls](https://github.com/vegasbrianc/docker-pulls) - Visualize Docker-Hub pull statistics with Prometheus
-* [GitHub Monitoring](https://github.com/vegasbrianc/github-monitoring) - Monitor your GitHub projects with Prometheus
-* [Traefik Reverse Proxy/Load Balancer Monitoring](https://github.com/vegasbrianc/docker-traefik-prometheus) - Monitor the popular Reverse Proxy/Load Balancer Traefik with Prometheus
+* [Docker Pulls](https://github.com/Jazun317/docker-pulls) - Visualize Docker-Hub pull statistics with Prometheus
+* [GitHub Monitoring](https://github.com/Jazun317/github-monitoring) - Monitor your GitHub projects with Prometheus
+* [Traefik Reverse Proxy/Load Balancer Monitoring](https://github.com/Jazun317/docker-traefik-prometheus) - Monitor the popular Reverse Proxy/Load Balancer Traefik with Prometheus
 
 *Have an intersting Project which use this Repo? Submit yours to the list*
 

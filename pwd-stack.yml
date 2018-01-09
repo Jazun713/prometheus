@@ -91,7 +91,7 @@ services:
     environment: 
       - REPO_LOCAL=/data/git/repos/prometheus
       - REPO_BRANCH=version-2
-      - REPO_REMOTE=https://github.com/vegasbrianc/prometheus.git
+      - REPO_REMOTE=https://github.com/Jazun317/prometheus.git
     tty: true
     volumes: 
       - prometheus_config_data:/data/git/repos/prometheus/prometheus
